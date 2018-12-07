@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="64dp"
+        android:text="URL WS:"
+        app:layout_constraintEnd_toStartOf="@+id/edtWS"
+        tools:layout_editor_absoluteY="31dp" />
+
+    <EditText
+        android:id="@+id/edtWS"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="http://nexo.carm.es/nexo/archivos/recursos/opendata/json/Campings.json"
+        tools:layout_editor_absoluteX="134dp"
+        tools:layout_editor_absoluteY="16dp" />
+
+    <EditText
+        android:id="@+id/edtRespuesta"
+        android:layout_width="330dp"
+        android:layout_height="317dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        tools:layout_editor_absoluteX="38dp"
+        tools:layout_editor_absoluteY="178dp" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:layout_marginTop="8dp"
+        android:text="Respuesta:"
+        app:layout_constraintBottom_toTopOf="@+id/edtRespuesta"
+        app:layout_constraintTop_toBottomOf="@+id/edtWS"
+        tools:layout_editor_absoluteX="33dp" />
+
+    <Button
+        android:id="@+id/btnConsumir"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:text="Consumir"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/btnParsear"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/edtRespuesta" />
+
+    <Button
+        android:id="@+id/btnParsear"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="Parsear"
+        app:layout_constraintBottom_toBottomOf="@+id/btnConsumir"
+        app:layout_constraintTop_toTopOf="@+id/btnConsumir"
+        app:layout_constraintVertical_bias="1.0"
+        tools:layout_editor_absoluteX="191dp" />
+
+</android.support.constraint.ConstraintLayout>
