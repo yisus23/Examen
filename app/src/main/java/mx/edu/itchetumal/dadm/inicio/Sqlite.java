@@ -3,6 +3,7 @@ package mx.edu.itchetumal.dadm.inicio;
 import android.content.Context;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
+import android.database.sqlite.SQLiteDatabase.CursorFactory;
 
 public class Sqlite extends SQLiteOpenHelper {
 
@@ -12,9 +13,8 @@ public class Sqlite extends SQLiteOpenHelper {
 
     Context contexto;
 
-    public Sqlite (Context contexto, String dbPais, Object o, int i){
-        super(contexto, "Pais", null, 1);
-        this.contexto=contexto;
+    public Sqlite(Context context, String nombre, CursorFactory factory, int version) {
+        super(context, nombre, factory, version);
     }
     @Override
     public void onCreate(SQLiteDatabase db) {
